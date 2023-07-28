@@ -120,6 +120,17 @@ Mg. Jeymi Valdivia Eguiluz</li>
 - Por favor, tenga en cuenta que este código debe tratar todas las palabras como si estuvieran en
   minúsculas y solo debe manejar letras de "a" a "z".
 
+## RESULTADO
+
+- El programa implementa un Trie (árbol Trie) en Java para construir un diccionario de palabras y realizar búsquedas eficientes para verificar si una palabra dada está en el diccionario o no. Se crea la clase TrieNode para representar los nodos del Trie, cada uno contiene un HashMap para almacenar los hijos correspondientes a cada letra del alfabeto y un booleano para indicar si es el final de una palabra.
+
+- La clase Trie contiene un nodo raíz y se implementan los métodos de inserción (insert) y búsqueda (search). Durante la inserción, se recorre cada letra de la palabra y se crea un nuevo nodo si la letra no está presente en el Trie, avanzando al nodo correspondiente para el siguiente carácter. Al finalizar la inserción, se marca el último nodo del recorrido como el final de la palabra.
+
+- En la búsqueda, también se recorre cada letra de la palabra, verificando si cada carácter está presente en los hijos del nodo actual. Si la palabra no se encuentra completa en el Trie, o el carácter no es válido, se lanza una excepción. Al finalizar la búsqueda, se retorna true si el último nodo del recorrido es el final de una palabra.
+
+- Se realizan pruebas de inserción y búsqueda en el método main usando palabras en minúsculas o mayúsculas y validando que son palabras de la “a” a la “z” ya que son validadas en la implementación del programa , y así mostrando los resultados en la consola.
+- El resultado de la prueba muestra que las palabras "Oracle", "JAVA" y "Estructura" están en el Trie, mientras que la palabra "eda" no se encuentra en el Trie, tal como se esperaba.
+
 ## REFERENCIAS
 
     - https://www.w3schools.com/java/
